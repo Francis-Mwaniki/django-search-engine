@@ -5,12 +5,14 @@ from rest_framework.response import Response
 import requests
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from django.conf import settings
+from dotenv import load_dotenv
+load_dotenv()
 """ create a get function for the search engine """
 @api_view(['GET'])
 def search(request):
-    API_KEY='AIzaSyBEwBPZfUcxo0_n2S2YLpN5vU1NNTm85Fc'
-    SEARCH_ENGINE_ID='b367e8f23498c4442'
+    API_KEY=settings.API_KEY
+    SEARCH_ENGINE_ID=settings.SEARCH_ENGINE_ID
      # get the query from the request
     query = request.GET.get('query')
     if query is None:

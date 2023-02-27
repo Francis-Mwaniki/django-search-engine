@@ -4,3 +4,5 @@ lib
 bin
 pyvenv.cfg
 .vscode
+.vscode/settings.json
+.env

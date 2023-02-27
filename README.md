@@ -32,5 +32,12 @@ python manage.py migrate
 ```
 python manage.py runserver localhost:8000
 ```
-
+#### you can query the API using the following endpoints
+```bash
+http://localhost:8000/api/search/?query={your_query}
+```
+#### _Example_
+```bash
+http://localhost:8000/api/search/?query=python
+```
 _Open [localhost:8000](http://localhost:8000) in Your Browser_

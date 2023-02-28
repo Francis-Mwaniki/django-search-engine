@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://franc-search.netlify.app/"
+    "https://franc-search.netlify.app"
 ]
 
 # Application definition

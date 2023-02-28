@@ -32,7 +32,9 @@ ALLOWED_HOSTS = ['*']
 """ allow all cors origins """
 
 CORS_ALLOWED_ORIGINS = [
+    "https://franc-search.netlify.app", 
     "https://nuxt-search-engine.vercel.app"
+    
 ]
 
 # Application definition

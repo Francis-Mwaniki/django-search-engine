@@ -41,6 +41,7 @@ def search(request):
     try:
         data = response.json()
         search_items = data.get("items")
+      
         if search_items is None:
             raise Http404("No search results found")
     except (ValueError, KeyError):
@@ -55,6 +56,7 @@ def search(request):
             snippet = search_item['snippet']
             html_snippet = search_item['htmlSnippet'].replace("<b>","").replace("</b>","")
             long_description = search_item['pagemap']['metatags'][0]['og:description']
+            og_image = search_item['pagemap']['metatags'][0]['og:image']
         except (KeyError, IndexError):
             continue
 
@@ -63,7 +65,8 @@ def search(request):
             'link': link,
             'snippet': snippet,
             'html_snippet': html_snippet,
-            'long_description': long_description
+            'long_description': long_description,
+            'og_image': og_image
         }
         results.append(result_dict)
 

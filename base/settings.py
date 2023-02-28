@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / '.env')
+#load_dotenv()
 API_KEY = os.environ.get('API_KEY')
 SEARCH_ENGINE_ID= os.environ.get('SEARCH_ENGINE_ID')
 # Quick-start development settings - unsuitable for production
@@ -24,8 +25,8 @@ SEARCH_ENGINE_ID= os.environ.get('SEARCH_ENGINE_ID')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY =SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
-#DEBUG = True
+# DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -128,6 +129,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles_build" / "static"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

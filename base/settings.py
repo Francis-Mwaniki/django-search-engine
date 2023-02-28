@@ -30,8 +30,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 """ allow all cors origins """
-CORS_ORIGIN_ALLOW_ALL = True
 
+CORS_ALLOWED_ORIGINS = [
+    "https://nuxt-search-engine.vercel.app"
+]
 
 # Application definition
 

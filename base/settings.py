@@ -29,11 +29,9 @@ SECRET_KEY =SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+""" allow all cors origins """
+CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://franc-search.netlify.app"
-]
 
 # Application definition
 

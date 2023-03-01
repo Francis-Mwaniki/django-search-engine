@@ -31,15 +31,17 @@ ALLOWED_HOSTS = ['*']
 """ allow all cors origins """
 
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOWED_ORIGINS = [
-    "https://franc-search.netlify.app", 
-    "https://nuxt-search-engine.vercel.app"
-    
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_WHITELIST = [
+    'https://nuxt-search-engine.vercel.app',
 ]
-CORS_ALLOW_HEADERS = [
+
+""" CORS_ALLOW_HEADERS = [
     'Content-Type',
     'Authorization',
-]
+] """
 
 # Application definition
 

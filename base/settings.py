@@ -36,6 +36,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_WHITELIST = [
     'https://nuxt-search-engine.vercel.app',
+    'http://localhost:3000',
 ]
 
 """ CORS_ALLOW_HEADERS = [
